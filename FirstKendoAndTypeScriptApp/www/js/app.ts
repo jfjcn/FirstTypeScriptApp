@@ -1,3 +1,6 @@
+///<reference path="jquery.d.ts" />
+///<reference path="kendo.mobile.d.ts" />
+
 class Greeter {
     element: HTMLElement;
     span: HTMLElement;
@@ -12,22 +15,23 @@ class Greeter {
     }
 
     start() {
-        this.timerToken =
-            setInterval(
-            () =>
-                this.span.innerText = new Date().toUTCString(), 500
-            );
+        this.timerToken = setInterval(() => this.span.innerText = new Date().toUTCString(), 500);
     }
 
     stop() {
         clearTimeout(this.timerToken);
     }
-
-
 }
+
+
 
 window.onload = () => {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
+
+
+    $("#content").append(" Test");
+
 };
+

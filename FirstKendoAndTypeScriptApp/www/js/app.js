@@ -1,3 +1,4 @@
+///<reference path="jquery.d.ts" />
 var Greeter = (function () {
     function Greeter(element) {
         this.element = element;
@@ -21,5 +22,6 @@ window.onload = function () {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
+    $("#content").append(" Test");
 };
 //@ sourceMappingURL=app.js.map

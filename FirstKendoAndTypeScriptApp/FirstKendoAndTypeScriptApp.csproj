@@ -3,11 +3,11 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{D76E8E95-4C44-481E-8417-5A32D201B9CD}</ProjectGuid>
+    <ProjectGuid>{A385FAD4-6AE8-43B6-8853-5EBD10DEFBC5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <FileUpgradeFlags>
@@ -21,14 +21,33 @@
     <UpgradeBackupLocation />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.css" />
+    <Content Include="www\css\app.css" />
     <Content Include="default.htm" />
-    <Content Include="app.js">
+    <Content Include="www\js\app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
+    <Content Include="www\css\images\back.png" />
+    <Content Include="www\css\kendo.mobile.all.min.css" />
+    <Content Include="www\css\kendo.mobile.android4.min.css" />
+    <Content Include="www\css\kendo.mobile.blackberry.min.css" />
+    <Content Include="www\css\kendo.mobile.ios.min.css" />
+    <Content Include="www\css\kendo.mobile.meego.min.css" />
+    <Content Include="www\css\styles.css" />
+    <Content Include="www\images\ajax-loader.gif" />
+    <Content Include="www\images\ajax-loader.png" />
+    <Content Include="www\images\franke_logo.jpg" />
+    <Content Include="www\images\icons-18-black.png" />
+    <Content Include="www\images\icons-18-white.png" />
+    <Content Include="www\images\icons-36-black.png" />
+    <Content Include="www\images\icons-36-white.png" />
+    <Content Include="www\js\jquery-1.8.2.min.js" />
+    <Content Include="www\js\jquery.d.ts" />
+    <Content Include="www\js\jquery.min.js" />
+    <Content Include="www\js\kendo.mobile.d.ts" />
+    <Content Include="www\js\kendo.mobile.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="www\js\app.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
@@ -38,13 +57,20 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+    <Content Include="www\css\images\KendoUI.ttf" />
+    <Content Include="www\css\images\KendoUI.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="www\js\controllers\" />
+    <Folder Include="www\js\models\" />
+    <Folder Include="www\js\views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>FirstTypeScriptApp</RootNamespace>
+    <RootNamespace>FirstKendoAndTypeScriptApp</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -57,7 +83,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3001/</IISUrl>
+          <IISUrl>http://localhost:59466/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

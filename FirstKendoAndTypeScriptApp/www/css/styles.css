@@ -1,0 +1,80 @@
+#login-view .logo {
+  display: block;
+  margin: 2em;
+  height: 200px;        
+  background: url(../images/franke_logo.jpg) no-repeat center center;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto; 
+}
+
+.button {
+  margin:  1em;
+	font-size: 1.2em;
+}
+
+.context-button {
+  position: absolute;
+  right: 1.6em;
+}
+
+#incident-list .incident-title {	
+  float: left;
+  width: 70%;
+}
+
+#incident-list .incident-subtitle {
+	float: left;
+	font-size: .7em;
+  width: 70%;
+}
+
+#incident-line-items .part-title {	
+  float: left;
+  width: 80%;
+}
+
+#incident-line-items .part-subtitle {
+	float: left;
+	font-size: .7em;
+  width: 80%;
+}
+
+#state-form .value {
+	float: right;
+	color: #ccc;
+}
+
+#login-view .login-button {
+  margin:  1em;
+	font-size: 1.2em;
+	background-color: green;
+}
+
+.km-ios #login .logo {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/*
+ * It seems Kendo UI Mobile does not provide any default glass-thingy to disable input while the loading
+ * display is active. Here we define a blanket glass that covers everything. This will disable all mouse/
+ * touch input. Not sure about keyboard input.
+ * See http://stackoverflow.com/questions/8818147/how-to-disable-all-div-contents-using-a-trasparent-div
+ * and http://stackoverflow.com/questions/639815/how-to-disable-all-div-content
+ * 
+ * See http://www.alessioatzeni.com/blog/login-box-modal-dialog-window-with-css-and-jquery/
+ * The Android Browser shows an ugly white rectangle if we use "position: absolute", as suggested in the
+ * Stack Overflow answer. By changing it to "position: fixed" as in the above link, it appears to work
+ * everywhere we need it.
+ *
+ */
+.glass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0.3;
+    background: #fff;
+}
